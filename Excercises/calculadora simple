@@ -1,0 +1,19 @@
+# Área triangulo A = (b*h)/2
+
+def area_triangulo(b, h):
+    return (b * h)/2
+
+resultado = area_triangulo(5, 6)
+print(resultado)
+
+# Área círculo A = pi*r^2
+
+import math
+
+def area_circulo(r):
+    return (r**2) * math.pi
+
+resultado2 = "{:.2f}".format(area_circulo(6))
+print(resultado2)
+
+# "{:.2f}".format( x )
