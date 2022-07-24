@@ -1,0 +1,3 @@
+rango = range(1, 101)
+for i in reversed(rango):
+    print(f"- {i}", end=' ')      # print(f" ) -> sustituye string por otra variable, debe ir entre {}
