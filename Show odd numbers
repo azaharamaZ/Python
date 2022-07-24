@@ -1,0 +1,12 @@
+# Taking multiple inputs from user
+
+x = [int(x) for x in input("Introduce 8 numeros: ").split()]      # .split() method -> separated by spaces
+print("Los números introducidos son: ", x )
+
+ # Iterate over the list and divide each number with a for loop
+
+for num in x:      
+    impar = (num % 2 != 0)
+    if impar == True:
+        print(num, end=' ')     # end = '' parameter in function print() for a print in the same line
+
