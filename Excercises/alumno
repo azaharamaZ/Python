@@ -1,0 +1,28 @@
+class Alumno:
+
+    def initialize(self, nombre, nota):
+        self.nombre = nombre
+        self.nota = nota
+
+    def imprimir(self):
+        print("Nombre: ", self.nombre)
+        print("Nota: ", self.nota)
+
+    def isAprobado(self):
+        if self.nota >= 5:
+            print("Aprobado")
+        else:
+            print("Supenso")
+
+# Bloque principal
+
+alumno1=Alumno()
+alumno1.initialize("Azahara", 8)
+alumno1.imprimir()
+alumno1.isAprobado()
+
+
+alumno2=Alumno()
+alumno2.initialize("Juanito", 4)
+alumno2.imprimir()
+alumno2.isAprobado()
