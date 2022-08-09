@@ -1,0 +1,57 @@
+import tkinter
+from tkinter import ttk, LabelFrame, Button
+
+
+window = tkinter.Tk()
+window.title("Radio Button")
+window.geometry('200x250+700+100')
+window.minsize(width=400, height=600)
+window.configure(bg="wheat")
+
+
+### FUNCION RESET ###
+
+def reset():
+    selected.set(0)
+
+
+frame = tkinter.LabelFrame(window,
+                           bg="wheat",
+                           text="Choose One",
+                           font="consolas 16")
+selected = tkinter.IntVar()
+
+r1 = tkinter.Radiobutton(window,
+                         text="Coffe",
+                         value="1",
+                         bg="wheat",
+                         font="consolas 16",
+                         width=20, anchor=tkinter.W,
+                         variable=selected)
+r1.pack()
+
+r2 = tkinter.Radiobutton(window,
+                         text="Tea",
+                         value="2",
+                         bg="wheat",
+                         font="consolas 16",
+                         width=20, anchor=tkinter.W,
+                         variable=selected)
+r2.pack()
+
+r3 = tkinter.Radiobutton(window,
+                         text="Juice",
+                         value="3",
+                         bg="wheat",
+                         font="consolas 16",
+                         width=20, anchor=tkinter.W,
+                         variable=selected)
+r3.pack()
+
+Button(window,
+       text="reset",
+       command=reset,
+       pady=5,
+       padx=20).pack(pady=10)
+
+window.mainloop()
