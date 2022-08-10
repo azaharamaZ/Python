@@ -1,0 +1,43 @@
+import tkinter as tk
+from tkinter import *
+
+window_list = tk.Tk()
+
+## APARIENCIA VENTANA ##
+
+window_list.title("Select One")
+window_list.geometry('200x250+700+100')
+window_list.minsize(width=400, height=600)
+window_list.configure(bg="wheat")
+
+title = tk.Label(window_list,
+                 text="SELECCIONA UN IDIOMA",
+                 font="consolas 20 bold",
+                 bg="lightblue",
+                 fg="black",
+                 width=40, height=3,
+                 anchor=tk.CENTER,
+                 justify=tk.CENTER,
+                 relief=tk.GROOVE,
+                 border=10,
+                 borderwidth=5)
+title.pack()
+
+language = ['- Spanish',
+         '- English',
+         '- Portuguese',
+         '- Japanese',
+         '- Germany',
+         '- Chinese'
+         ]
+
+set_language = tk.StringVar(value=language)
+listabox = tk.Listbox(window_list,
+                      height=10, width=20,
+                      font='consolas 12 bold',
+                      bg='wheat', fg='black',
+                      selectmode=MULTIPLE,
+                      selectbackground='lightblue',
+                      listvariable=set_language)
+listabox.pack()
+window_list.mainloop()
